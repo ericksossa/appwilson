@@ -1,67 +1,57 @@
 <ion-header>
-  <ion-navbar color="primary">
-    <ion-title>
-      Sonidos APP
-    </ion-title>
+    <ion-navbar color="purple">
+        <ion-title>
+            Users History
+        </ion-title>
 
-    <ion-buttons end>
-      <button ion-button 
-              *ngIf="!ordenando" 
-              (click)="ordenando = true">
+        <ion-buttons end>
+            <button ion-button *ngIf="!ordenando" (click)="ordenando = true">
         Ordenar
       </button>
 
-    </ion-buttons>
+        </ion-buttons>
 
-    <ion-buttons>
-      <button ion-button 
-              *ngIf="ordenando" 
-              (click)="ordenando = false">
+        <ion-buttons end>
+            <button ion-button *ngIf="ordenando" (click)="ordenando = false">
         Listo
       </button>
 
-    </ion-buttons>
+        </ion-buttons>
 
 
-  </ion-navbar>
+    </ion-navbar>
 </ion-header>
 
 <ion-content>
+    <ion-refresher [enabled]="!ordenando" (ionRefresh)="recargar($event)">
+        <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+    <ion-list [reorder]="ordenando" (ionItemReorder)="reordenar($event)">
+        <!--propiedad de las listas-->
 
-  <ion-refresher [enabled]="!ordenando" (ionRefresh)="recargar($event)">
-    <ion-refresher-content></ion-refresher-content>
-  </ion-refresher>
+        <ion-item-sliding *ngFor="let item of items; let i = index">
 
+            <ion-item (click)="verDetalles(item)">
 
-
-  <ion-list [reorder]="ordenando" (ionItemReorder)="reordenar($event)">
-    <!--propiedad de las listas-->
-
-    <ion-item-sliding *ngFor="let animal of animales; let i = index">
-
-      <ion-item (click)="reproducir(animal)">
-
-        <ion-avatar item-left>
-          <img [src]="animal.imagen">
-        </ion-avatar>
-        <h2>{{animal.nombre}}</h2>
-
-        <ion-icon *ngIf="!animal.reproduciendo" name="play" item-right></ion-icon>
-        <ion-icon *ngIf="animal.reproduciendo" name="pause" item-right></ion-icon>
-
-      </ion-item>
+                <ion-avatar item-left>
+                    <img [src]="item.imagen">
+                </ion-avatar>
+                <h2>{{item.nombre}}</h2>
 
 
-      <ion-item-options side="right">
-        <button ion-button color="danger" (click)="borrarAnimal(i)">
+
+            </ion-item>
+
+
+            <ion-item-options side="right">
+                <button ion-button color="danger" (click)="borrarAnimal(i)">
           <ion-icon name="trash"></ion-icon>
           Borrar
         </button>
-      </ion-item-options>
+            </ion-item-options>
 
 
-    </ion-item-sliding>
+        </ion-item-sliding>
 
-  </ion-list>
-
+    </ion-list>
 </ion-content>
