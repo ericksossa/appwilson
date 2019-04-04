@@ -1,37 +1,37 @@
 <ion-header>
-  <ion-navbar color="purple">
-    <ion-title>Backlog</ion-title>
-  </ion-navbar>
+    <ion-navbar color="purple">
+        <ion-title>Backlog</ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <img [src]="items.imagen">
-  <ion-card>
-    <ion-card-header>
-      Information
-    </ion-card-header>
-    <ion-list>
-      <button (click)="mostrarHistorias(items.data)" ion-item>
+    <img [src]="items.imagen">
+    <ion-card>
+        <ion-card-header>
+            Information
+        </ion-card-header>
+        <ion-list>
+            <button (click)="mostrarHistorias(items.data)" ion-item>
         <ion-icon md="md-contact" color="purple" item-start></ion-icon>
         History User
       </button>
 
-      <button [navPush]="activities" [navParams]="{ 'data': items }"ion-item>
+            <button [navPush]="activities" [navParams]="{ 'data': items }" ion-item>
         <ion-icon name="create" color="purple" item-start></ion-icon>
         Activities
       </button>
 
-      <button ion-item>
+            <button ion-item>
         <ion-icon name="time" color="purple" item-start></ion-icon>
-        Estimated Work: <label>{{items.time}}</label>
+        Estimated Work <label>{{items.time}}</label>
       </button>
- 
-      <button [navPush]="burnChart" ion-item>
+
+            <button [navPush]="burnChart" ion-item>
         <ion-icon md="md-pie" color="purple" item-start></ion-icon>
         Burn Chart
       </button>
 
-    </ion-list>
-  </ion-card>
- 
+        </ion-list>
+    </ion-card>
+
 </ion-content>

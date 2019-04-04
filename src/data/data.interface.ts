@@ -2,54 +2,65 @@ export const AVATAR = [
   {
     nombre: "Like Guide",
     imagen: "assets/avatar/av-1.png",
-    time : "2 days",
+    time: "2 days",
+    activities: {
+      first: "Create a registration page",
+      second: "implement a section of chat "
+    },
     data: {
-      quiero:
-        "Contarme directamente con otros usuarios.",
-      para: "establecer un acuerdo seguro y concreto."
+      history:
+        "As a gide i need to contactme directly with other  usres, for establish secure and concreet agreement "
     }
   },
   {
     nombre: "Like user",
     imagen: "assets/avatar/av-2.png",
-    time : "4 days",
+    time: "4 days",
     activities: {
-      name:  'Crear post'
+      first: "Create post"
     },
     data: {
-      quiero:
-        "Una aplicación fácil de usar y agradable a la vista.",
-      para: "Que la hora de compartir o visualizar publicaciones, sea eficaz."
+      history:
+        "As a user i need an application easy to use, that allow me to share photos, descriptions and allow me to see post of other persons"
     }
   },
   {
     nombre: "Like Guide",
     imagen: "assets/avatar/av-3.png",
-    time : "5 Hrs",
+    time: "5 Hrs",
+    activities: {
+      first: "Create a commentary box",
+      second: "Create a ranking of punctuation"
+    },
     data: {
-      quiero:
-        "Que la plataforma  me de la opción de dar una puntación a mi trabajo y al de los demás como guías.",
-      para: "Aportar credibilidad a mi trabajo como guía."
+      history:
+        "Que la plataforma  me de la opción de dar una puntación a mi trabajo y al de los demás como guías Aportar credibilidad a mi trabajo como guía."
     }
   },
   {
     nombre: "Like User",
     imagen: "assets/avatar/av-4.png",
-    time : "8 Hrs",
+    time: "8 Hrs",
+    activities: {
+      first: "Create a section post"
+    },
     data: {
-      quiero:
-        "Una plataforma que me permita ver información de lugares que otros han visitado.",
-      para: "tener opciones de lugares para visitar."
+      history:
+        "Una plataforma que me permita ver información de lugares que otros han visitado tener opciones de lugares para visitar."
     }
   },
   {
     nombre: "Like Guide",
     imagen: "assets/avatar/av-5.png",
-    time : "7 Hrs",
+    time: "7 Hrs",
+    activities: {
+      first: "Create the storage in firebase",
+      second: "install necessary plugins",
+      third: "create the conection"
+    },
     data: {
-      quiero:
-        "Una plataforma que me permita compartir información de lugares que he visitado.",
-      para: "facilitar la contratación de un tour."
+      history:
+        "Una plataforma que me permita compartir información de lugares que he visitado facilitar la contratación de un tour."
     }
   }
 ];

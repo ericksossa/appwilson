@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ToastController } from 'ionic-angular';
-import { BurnChartPage } from '../burn-chart/burn-chart';
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
+
 import { ActivitiesPage } from '../activities/activities';
+import { BurnChartPage } from '../burn-chart/burn-chart';
 
 
 @IonicPage()
@@ -22,10 +22,9 @@ export class BacklogPage {
     this.items = this.navParams.get("obj");
   }
 
-  mostrarHistorias(data: any) {
+  mostrarHistorias(data: any)  {
     const toast = this.toastCtrl.create({
-      message: `Quiero: ${data.quiero}\n\
-      Para: ${data.para}`,
+      message: `${data.history}`,
       position: 'middle',
       showCloseButton: true,
       closeButtonText: 'Ok'
