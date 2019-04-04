@@ -1,18 +1,25 @@
 import { ErrorHandler, NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule} from '@angular/platform-browser';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-
-import { BacklogPage } from '../pages/backlog/backlog';
 import { HomePage } from '../pages/home/home';
 import { MyApp } from './app.component';
+    
+    
+
+import { BacklogPage } from '../pages/backlog/backlog';
+import { BurnChartPage } from '../pages/burn-chart/burn-chart';
+import { ActivitiesPage } from '../pages/activities/activities';
+
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    BacklogPage
+    BacklogPage,
+    BurnChartPage,
+    ActivitiesPage
   ],
   imports: [
     BrowserModule,
@@ -22,7 +29,9 @@ import { MyApp } from './app.component';
   entryComponents: [
     MyApp,
     HomePage,
-    BacklogPage
+    BacklogPage,
+    BurnChartPage,
+    ActivitiesPage
   ],
   providers: [
     StatusBar,

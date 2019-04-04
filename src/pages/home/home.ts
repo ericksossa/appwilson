@@ -15,25 +15,20 @@ export class HomePage {
 
   constructor(private navCtrl: NavController) {
     this.items = AVATAR.slice(0);
-    console.log(this.items);
-
   }
 
-  borrarAnimal(idx: number) {
+  borrarItem(idx: number) {
     this.items.splice(idx, 1);
   }
 
   recargar(refresher: Refresher) {
-    console.log("Inicio del refresher");
-
     setTimeout(() => {
-      console.log("Termino");
       this.items = AVATAR.slice(0);
       refresher.complete();
     }, 1500);
   }
 
-  //metodo para reodenar animales temporalmente.
+  //metodo para reodenar  temporalmente.
   reordenar(indices: any) {
     this.items = reorderArray(this.items, indices);
   }
