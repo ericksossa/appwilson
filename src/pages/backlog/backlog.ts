@@ -4,32 +4,35 @@ import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angu
 import { ActivitiesPage } from '../activities/activities';
 import { BurnChartPage } from '../burn-chart/burn-chart';
 
-
 @IonicPage()
 @Component({
   selector: "page-backlog",
   templateUrl: "backlog.html"
 })
-export class BacklogPage {
+export class BacklogPage{
   items: any = {};
   time: any;
   burnChart: any = BurnChartPage;
-  activities:any = ActivitiesPage;
+  activities: any = ActivitiesPage;
+
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    private toastCtrl: ToastController) {
-    this.items = this.navParams.get("obj");
-  }
+    private toastCtrl: ToastController,
 
-  mostrarHistorias(data: any)  {
+  ) {
+    this.items = this.navParams.get("obj");
+    console.log(this.items);
+
+  }
+  mostrarHistorias(data: any) {
     const toast = this.toastCtrl.create({
       message: `${data.history}`,
-      position: 'middle',
+      position: "middle",
       showCloseButton: true,
-      closeButtonText: 'Ok'
-
+      closeButtonText: "Ok"
     });
     toast.present();
   }
+
 }

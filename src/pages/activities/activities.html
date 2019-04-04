@@ -1,21 +1,37 @@
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>Activities</ion-title>
-  </ion-navbar>
+    <ion-navbar color="purple">
+        <ion-title>Activities</ion-title>
+    </ion-navbar>
 
 </ion-header>
 
 
 <ion-content>
 
-  <ion-card color="primary">
-    <ion-card-header>
-      {{items.activities.name}}
-    </ion-card-header>
-    <ion-card-content>
-      The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.
-    </ion-card-content>
-  </ion-card>
+    <ion-card color="primary">
+        <ion-card-header>
+            {{items.activities.first}}
+        </ion-card-header>
+        <ion-card-content>
+            {{'xxx'}}
+        </ion-card-content>
+    </ion-card>
+    <ion-card *ngIf="items.activities.second" color="success">
+        <ion-card-header>
+            {{items.activities.second}}
+        </ion-card-header>
+        <ion-card-content>
+            {{'xxx'}}
+        </ion-card-content>
+    </ion-card>
+    <ion-card *ngIf="items.activities.third" color="primary">
+        <ion-card-header>
+            {{items.activities.third}}
+        </ion-card-header>
+        <ion-card-content>
+            {{'xxx'}}
+        </ion-card-content>
+    </ion-card>
 
 </ion-content>

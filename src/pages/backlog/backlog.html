@@ -6,32 +6,18 @@
 
 <ion-content padding>
     <img [src]="items.imagen">
+    <!-- card -->
     <ion-card>
         <ion-card-header>
             Information
         </ion-card-header>
-        <ion-list>
-            <button (click)="mostrarHistorias(items.data)" ion-item>
-        <ion-icon md="md-contact" color="purple" item-start></ion-icon>
-        History User
-      </button>
+        <!-- <accordion></accordion> -->
+        <button [navPush]="activities" [navParams]="{ 'data': items }" ion-item>
+      <ion-icon name="create" color="purple" item-start></ion-icon>
+      Activities
+    </button>
 
-            <button [navPush]="activities" [navParams]="{ 'data': items }" ion-item>
-        <ion-icon name="create" color="purple" item-start></ion-icon>
-        Activities
-      </button>
 
-            <button ion-item>
-        <ion-icon name="time" color="purple" item-start></ion-icon>
-        Estimated Work <label>{{items.time}}</label>
-      </button>
-
-            <button [navPush]="burnChart" ion-item>
-        <ion-icon md="md-pie" color="purple" item-start></ion-icon>
-        Burn Chart
-      </button>
-
-        </ion-list>
     </ion-card>
-
+    <!--/ card -->
 </ion-content>

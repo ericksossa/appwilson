@@ -6,4 +6,12 @@ page-backlog {
         font-family: 'Roboto', sans-serif;
         font-weight: bold;
     }
+    .card-header {
+        background-color: purple;
+        color: #fff;
+    }
+    .card-content {
+        padding: 0px 16px;
+        max-height: 0px;
+    }
 }

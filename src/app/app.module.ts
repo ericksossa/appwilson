@@ -16,8 +16,7 @@ import { MyApp } from './app.component';
     HomePage,
     BacklogPage,
     BurnChartPage,
-    ActivitiesPage   
-
+    ActivitiesPage,
   ],
   imports: [BrowserModule, IonicModule.forRoot(MyApp)],
   bootstrap: [IonicApp],
@@ -27,7 +26,6 @@ import { MyApp } from './app.component';
     BacklogPage,
     BurnChartPage,
     ActivitiesPage
-
   ],
   providers: [
     StatusBar,
