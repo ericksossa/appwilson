@@ -3,12 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-
+import { MyApp } from './app.component';
+// pages
 import { ActivitiesPage } from '../pages/activities/activities';
 import { BacklogPage } from '../pages/backlog/backlog';
 import { BurnChartPage } from '../pages/burn-chart/burn-chart';
 import { HomePage } from '../pages/home/home';
-import { MyApp } from './app.component';
+// components
+import { AccordionComponent } from '../components/accordion/accordion';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,7 @@ import { MyApp } from './app.component';
     BacklogPage,
     BurnChartPage,
     ActivitiesPage,
+    AccordionComponent
   ],
   imports: [BrowserModule, IonicModule.forRoot(MyApp)],
   bootstrap: [IonicApp],

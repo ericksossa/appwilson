@@ -1,14 +1,16 @@
-import { Component, OnInit, Renderer, ViewChild } from '@angular/core';
+import { Component, OnInit, Renderer, ViewChild, Input } from '@angular/core';
 
 @Component({
   selector: "accordion",
   templateUrl: "accordion.html"
 })
-export class AccordionComponent implements OnInit{
+export class AccordionComponent implements OnInit {
   text: string;
   accordionExapanded = false;
   @ViewChild("content") content: any;
-  constructor(public renderer: Renderer) {}
+  @Input() history: string;
+  @Input() time: string;
+  constructor(public renderer: Renderer) { }
 
   ngOnInit() {
     console.log(this.content.nativeElement);

@@ -64,5 +64,4 @@ export class BurnChartPage {
     return this.getChart(this.lineCanvas.nativeElement, 'line', data)
   }
 
-
 }

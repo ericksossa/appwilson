@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
+import { Component, ViewChild, Renderer } from '@angular/core';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { ActivitiesPage } from '../activities/activities';
 import { BurnChartPage } from '../burn-chart/burn-chart';
@@ -11,28 +11,35 @@ import { BurnChartPage } from '../burn-chart/burn-chart';
 })
 export class BacklogPage{
   items: any = {};
-  time: any;
   burnChart: any = BurnChartPage;
   activities: any = ActivitiesPage;
+  accordionExapanded = false;
+  @ViewChild("content") content: any;
 
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    private toastCtrl: ToastController,
-
-  ) {
+    public renderer: Renderer) {
     this.items = this.navParams.get("obj");
-    console.log(this.items);
-
   }
-  mostrarHistorias(data: any) {
-    const toast = this.toastCtrl.create({
-      message: `${data.history}`,
-      position: "middle",
-      showCloseButton: true,
-      closeButtonText: "Ok"
-    });
-    toast.present();
+
+
+  toggleAccordion() {
+    if (this.accordionExapanded) {
+      this.renderer.setElementStyle(
+        this.content.nativeElement,
+        "max-height",
+        "0px"
+      );
+    } else {
+      this.renderer.setElementStyle(
+        this.content.nativeElement,
+        "max-height",
+        "7000px"
+      );
+    }
+
+    this.accordionExapanded = !this.accordionExapanded;
   }
 
 }

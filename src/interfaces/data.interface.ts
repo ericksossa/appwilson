@@ -3,5 +3,4 @@ export interface Data {
     imagen: string;
     time: string;
     data: any;
-
 }

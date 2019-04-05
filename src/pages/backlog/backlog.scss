@@ -1,17 +1,14 @@
 page-backlog {
-    .card-header-md {
-        font-size: 1.8rem;
-        color: purple;
-        padding: 16px;
-        font-family: 'Roboto', sans-serif;
-        font-weight: bold;
-    }
-    .card-header {
-        background-color: purple;
-        color: #fff;
-    }
-    .card-content {
-        padding: 0px 16px;
-        max-height: 0px;
-    }
+  .card-header-md {
+    font-size: 1.8rem;
+    color: purple;
+    padding: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+  }
+
+  .card-content {
+    padding: 0px 16px;
+    max-height: 0px;
+  }
 }

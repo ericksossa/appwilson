@@ -1,8 +1,8 @@
-<ion-card>
-    <ion-card-header (click)="toggleAccordion()">
-        History User
-    </ion-card-header>
-    <ion-card-content #content>
+<button ion-item (click)="toggleAccordion()">
+  <ion-icon ios="ios-contact" color="purple" md="md-contact" item-start></ion-icon>
+  History User
+</button>
 
-    </ion-card-content>
-</ion-card>
+<ion-card-content #content>
+  <p>{{history}}</p>
+</ion-card-content>
