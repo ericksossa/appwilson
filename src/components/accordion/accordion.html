@@ -1,8 +1,8 @@
-<button ion-item (click)="toggleAccordion()">
-  <ion-icon ios="ios-contact" color="purple" md="md-contact" item-start></ion-icon>
+<button ion-item (click)="toggleAccordion()" [ngStyle]="{'background-color': buttonColor}">
+  <ion-icon ios="ios-contact" color="purple2" md="md-contact" item-start></ion-icon>
   History User
 </button>
 
 <ion-card-content #content>
-  <p>{{history}}</p>
+    <p>{{history}}</p>
 </ion-card-content>

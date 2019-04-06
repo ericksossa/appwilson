@@ -1,43 +1,43 @@
 <ion-header>
-  <ion-navbar color="purple">
-    <ion-title>Backlog</ion-title>
-  </ion-navbar>
+    <ion-navbar color="purple2">
+        <ion-title>Data User</ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <img [src]="items.imagen">
- 
-  <ion-card>
-    <ion-card-header>
-      Information
-    </ion-card-header>
-    <!-- component accordion 
-      Nota: se manda la data de la historia al componente ACCORDION-->
-    <accordion [history]="items.data.history"></accordion>
-    <!-- /component accordion -->
+    <img [src]="items.imagen">
 
-    <!-- button activities -->
-    <button [navPush]="activities" [navParams]="{ 'data': items }" ion-item>
-      <ion-icon name="create" color="purple" item-start></ion-icon>
+    <ion-card>
+        <ion-card-header>
+            Information
+        </ion-card-header>
+        <!-- component accordion
+      Nota: se manda la data de la historia al componente ACCORDION-->
+        <accordion [history]="items.data.history"></accordion>
+        <!-- /component accordion -->
+
+        <!-- button activities -->
+        <button [navPush]="activities" [navParams]="{ 'data': items }" ion-item>
+      <ion-icon name="create" color="purple2" item-start></ion-icon>
       Activities
     </button>
-    <!-- /button activities -->
+        <!-- /button activities -->
 
-    <!-- button time -->
-    <button ion-item (click)="toggleAccordion()">
-      <ion-icon name="time" color="purple" item-start></ion-icon>
+        <!-- button time -->
+        <button ion-item (click)="toggleAccordion()" [ngStyle]="{'background-color': buttonColor}">
+      <ion-icon name="time" color="purple2" item-start></ion-icon>
       Estimated Work
     </button>
-    <ion-card-content #content>
-      <label>{{items.time}}</label>
-    </ion-card-content>
-    <!-- /button time -->
+        <ion-card-content #content>
+            <label>{{items.time}}</label>
+        </ion-card-content>
+        <!-- /button time -->
 
-    <!-- button burn chart  -->
-    <button [navPush]="burnChart" ion-item>
-      <ion-icon md="md-pie" color="purple" item-start></ion-icon>
-      Burn Chart
+        <!-- button burn chart  -->
+        <button [navPush]="burnChart" ion-item>
+      <ion-icon md="md-pie" color="purple2" item-start></ion-icon>
+      Burndown chart
     </button>
-    <!-- /button burn chart  -->
-  </ion-card>
+        <!-- /button burn chart  -->
+    </ion-card>
 </ion-content>

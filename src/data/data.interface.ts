@@ -21,11 +21,11 @@ export const AVATAR = [
     },
     data: {
       history:
-        "As a user i need an application easy to use, that allow me to share photos, descriptions and allow me to see post of other persons"
+        "As a user i need an application easy to use, that allow me to share photos, descriptions and also allow me to see post of other persons"
     }
   },
   {
-    nombre: "Like Guide",
+    nombre: "Like User",
     imagen: "assets/avatar/av-3.png",
     time: "5 Hrs",
     activities: {
@@ -34,7 +34,20 @@ export const AVATAR = [
     },
     data: {
       history:
-        "Que la plataforma  me de la opción de dar una puntación a mi trabajo y al de los demás como guías Aportar credibilidad a mi trabajo como guía."
+        "As a user i need a platform that content a commentarybox and a rating-widget, that allow me rate the work of guides. "
+    }
+  },
+  {
+    nombre: "Like Guide",
+    imagen: "assets/avatar/av-6.png",
+    time: "5 Hrs",
+    activities: {
+      first: "Create a commentary box",
+      second: "Create a ranking of punctuation"
+    },
+    data: {
+      history:
+        "As a guide i need a platform that content a rating-widget, for give credibility to my work like guide."
     }
   },
   {
@@ -46,7 +59,7 @@ export const AVATAR = [
     },
     data: {
       history:
-        "Una plataforma que me permita ver información de lugares que otros han visitado tener opciones de lugares para visitar."
+        "As a user i need a application that allow me to see options of places for visit, through publications of other persons."
     }
   },
   {
@@ -60,7 +73,7 @@ export const AVATAR = [
     },
     data: {
       history:
-        "Una plataforma que me permita compartir información de lugares que he visitado facilitar la contratación de un tour."
+        "As a guide i need a application that allow me share photos and descriptions of places that i've visited, so people can hire me as their guide."
     }
   }
 ];

@@ -1,4 +1,4 @@
-import { Component, ViewChild, Renderer } from '@angular/core';
+import { Component, Renderer, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { ActivitiesPage } from '../activities/activities';
@@ -14,6 +14,7 @@ export class BacklogPage{
   burnChart: any = BurnChartPage;
   activities: any = ActivitiesPage;
   accordionExapanded = false;
+  buttonColor: string = '#fff';
   @ViewChild("content") content: any;
 
   constructor(
@@ -25,6 +26,7 @@ export class BacklogPage{
 
 
   toggleAccordion() {
+    this.buttonColor ='#fff';
     if (this.accordionExapanded) {
       this.renderer.setElementStyle(
         this.content.nativeElement,
@@ -32,6 +34,7 @@ export class BacklogPage{
         "0px"
       );
     } else {
+      this.buttonColor='#d1c4e9';
       this.renderer.setElementStyle(
         this.content.nativeElement,
         "max-height",

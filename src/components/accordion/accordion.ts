@@ -1,4 +1,4 @@
-import { Component, OnInit, Renderer, ViewChild, Input } from '@angular/core';
+import { Component, Input, OnInit, Renderer, ViewChild } from '@angular/core';
 
 @Component({
   selector: "accordion",
@@ -10,6 +10,7 @@ export class AccordionComponent implements OnInit {
   @ViewChild("content") content: any;
   @Input() history: string;
   @Input() time: string;
+  buttonColor: string = '#fff';
   constructor(public renderer: Renderer) { }
 
   ngOnInit() {
@@ -17,6 +18,7 @@ export class AccordionComponent implements OnInit {
   }
 
   toggleAccordion() {
+    this.buttonColor ='#fff';
     if (this.accordionExapanded) {
       this.renderer.setElementStyle(
         this.content.nativeElement,
@@ -24,13 +26,14 @@ export class AccordionComponent implements OnInit {
         "0px"
       );
     } else {
+      this.buttonColor='#d1c4e9';
       this.renderer.setElementStyle(
         this.content.nativeElement,
         "max-height",
         "7000px"
       );
     }
-
     this.accordionExapanded = !this.accordionExapanded;
+
   }
 }
